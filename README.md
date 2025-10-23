@@ -8,9 +8,8 @@ An Augmentative and Alternative Communication (AAC) app designed for children wi
 - Text-to-speech functionality in English and Arabic
 - Customizable keyboard layouts
 - Child-friendly, colorful interface
-- Responsive design for tablets and computers
+- A free web app
 - 13 communication categories (Food, Feelings, School, Bahrain, etc.)
-- AI-powered word suggestions
 - Voice customization (boy/girl voices)
 
 ## Purpose
