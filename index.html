@@ -140,7 +140,6 @@
         gap: 15px;
       }
 
-      /* INCREASED: Message display height */
       .message-display {
         background: white;
         border-radius: 16px;
@@ -162,7 +161,6 @@
         flex: 1;
       }
 
-      /* NEW: Buttons container outside message display */
       .message-buttons {
         display: flex;
         flex-direction: column;
@@ -170,7 +168,6 @@
         width: 120px;
       }
 
-      /* CHANGED: Speak button now light pastel blue and positioned first */
       .speak-btn {
         padding: var(--button-padding);
         border-radius: var(--button-radius);
@@ -183,11 +180,7 @@
         transition: all 0.3s ease;
         font-size: var(--font-size);
         font-weight: 600;
-        background: linear-gradient(
-          135deg,
-          #a8d8ff,
-          #87ceeb
-        ); /* Light pastel blue */
+        background: linear-gradient(135deg, #a8d8ff, #87ceeb);
         color: #2d3436;
         border: 2px solid #87ceeb;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -200,7 +193,6 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
 
-      /* CHANGED: Clear button now light red and positioned second */
       .clear-btn {
         padding: var(--button-padding);
         border-radius: var(--button-radius);
@@ -318,7 +310,7 @@
         filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.1));
       }
 
-      /* Diverse color palette for categories */
+      /* color palette for categories */
       .category-1 {
         background: linear-gradient(135deg, #ffd6e7, #ffb6d9);
       }
@@ -334,21 +326,13 @@
       .category-5 {
         background: linear-gradient(135deg, #e8d4ff, #d8c4f0);
       }
-      /* CHANGED: Activities to light pastel pink */
+
       .category-6 {
-        background: linear-gradient(
-          135deg,
-          #ffd1dc,
-          #ffb6c1
-        ); /* Light pastel pink */
+        background: linear-gradient(135deg, #ffd1dc, #ffb6c1);
       }
-      /* CHANGED: Places to light pastel green */
+
       .category-7 {
-        background: linear-gradient(
-          135deg,
-          #d4ffd4,
-          #b5f5b5
-        ); /* Light pastel green */
+        background: linear-gradient(135deg, #d4ffd4, #b5f5b5);
       }
       .category-8 {
         background: linear-gradient(135deg, #d4f0f0, #b5e8e8);
@@ -399,7 +383,6 @@
         height: 44px;
       }
 
-      /* FIXED: Category title properly centered */
       .category-title {
         font-size: 28px;
         font-weight: 700;
@@ -408,7 +391,7 @@
         flex-grow: 1;
         margin: 0;
         position: relative;
-        left: -40px; /* Move to the left to center properly */
+        left: -40px;
       }
 
       .category-instruction {
@@ -466,7 +449,6 @@
         border-top: 1px solid #eee;
       }
 
-      /* Language button matches settings button size and color */
       .lang-btn {
         padding: 12px 20px;
         border-radius: var(--button-radius);
@@ -481,11 +463,7 @@
         font-weight: 600;
         color: #5a5a5a;
         border: 2px solid #e0e0e0;
-        background: linear-gradient(
-          135deg,
-          #f0f0f0,
-          #e0e0e0
-        ); /* Same color as settings */
+        background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
           inset 0 1px 0 rgba(255, 255, 255, 0.9);
         height: 44px;
@@ -498,7 +476,7 @@
           inset 0 1px 0 rgba(255, 255, 255, 0.9);
       }
 
-      /* AI Suggestions Section */
+      /* AI Suggestions Section (canceled) */
       .ai-suggestions {
         margin-top: 20px;
         padding: 15px;
@@ -564,7 +542,6 @@
         transform: translateY(2px);
       }
 
-      /* NEW: Keyboard Modal Styles */
       .modal-overlay {
         display: none;
         position: fixed;
@@ -658,7 +635,6 @@
         background: linear-gradient(135deg, #a8d8ff, #87ceeb);
       }
 
-      /* NEW: Customize Modal Styles */
       .customize-options {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -731,7 +707,6 @@
         border-color: #88d4b5;
       }
 
-      /* NEW: Active button styles */
       .category-button.active {
         border: 3px solid #2d3436;
         box-shadow: 0 0 10px rgba(45, 52, 54, 0.5);
@@ -785,7 +760,6 @@
           padding: 12px 14px;
         }
 
-        /* Mobile adjustments for message container */
         .message-container {
           flex-direction: column;
         }
@@ -850,13 +824,12 @@
         <div class="message-display" id="messageDisplay">
           <span id="messageText">Your message will appear here</span>
         </div>
-        <!-- NEW: Buttons container outside message display -->
+
         <div class="message-buttons">
-          <!-- CHANGED: Speak button first (light pastel blue) -->
           <button class="speak-btn" id="speakBtn">
             <i class="fas fa-volume-up"></i> <span id="speakText">Speak</span>
           </button>
-          <!-- CHANGED: Clear button second (light red) -->
+
           <button class="clear-btn" id="clearBtn">
             <i class="fas fa-broom"></i> <span id="clearText">Clear</span>
           </button>
@@ -864,7 +837,6 @@
       </div>
 
       <div class="instruction-bar">
-        <!-- NEW: Keyboard button in instruction bar -->
         <button class="keyboard-instruction-btn" id="keyboardInstructionBtn">
           <i class="fas fa-keyboard"></i>
           <span id="keyboardText">Keyboard</span>
@@ -903,13 +875,11 @@
             <div id="peopleText">People</div>
           </button>
 
-          <!-- CHANGED: Activities to light pastel pink -->
           <button class="category-button category-6" data-category="Activities">
             <div class="button-icon">🎮</div>
             <div id="activitiesText">Activities</div>
           </button>
 
-          <!-- CHANGED: Places to light pastel green -->
           <button class="category-button category-7" data-category="Places">
             <div class="button-icon">🏠</div>
             <div id="placesText">Places</div>
@@ -941,7 +911,7 @@
             <div id="eventsText">Events</div>
           </button>
 
-          <!-- NEW: Questions category -->
+          <!-- Questions category -->
           <button class="category-button category-13" data-category="Questions">
             <div class="button-icon">❓</div>
             <div id="questionsCatText">Questions</div>
@@ -959,7 +929,6 @@
       </div>
     </div>
 
-    <!-- NEW: Keyboard Modal -->
     <div class="modal-overlay" id="keyboardModal">
       <div class="modal-content">
         <div class="modal-header">
@@ -972,7 +941,6 @@
       </div>
     </div>
 
-    <!-- NEW: Settings Modal (includes customization) -->
     <div class="modal-overlay" id="settingsModal">
       <div class="modal-content settings-modal-content">
         <div class="modal-header">
@@ -1186,7 +1154,6 @@
         ],
       };
 
-      // Category data - ALL categories now have full data
       const categoryData = {
         Food: {
           title: { en: "Food & Eating", ar: "الطعام والأكل" },
@@ -2617,7 +2584,7 @@
               icon: "✨",
               speakText: { en: "beautiful", ar: "جميل" },
             },
-            // NEW: Bahrain-specific words
+            // Bahrain-specific words
             {
               text: { en: "Bahrain Fort", ar: "قلعة البحرين" },
               icon: "🏰",
@@ -3169,6 +3136,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         updateLanguage();
         setupEventListeners();
+        loadVoices();
       });
 
       // Set up event listeners
@@ -3193,7 +3161,7 @@
           .getElementById("clearBtn")
           .addEventListener("click", clearMessage);
 
-        // Category buttons - FIXED: All categories now working
+        // Category buttons
         document.querySelectorAll(".category-button").forEach((button) => {
           button.addEventListener("click", function () {
             const categoryName = this.getAttribute("data-category");
@@ -3410,7 +3378,6 @@
         );
       }
 
-      // Helper function to adjust color brightness
       function adjustColor(color, amount) {
         return (
           "#" +
@@ -3428,7 +3395,7 @@
         );
       }
 
-      // Show category detail - FIXED: All categories now working
+      // Show category detail
       function showCategoryDetail(categoryName) {
         const category = categoryData[categoryName];
         if (!category) {
@@ -3491,7 +3458,6 @@
 
         categoryDetail.innerHTML = detailHTML;
 
-        // Add event listeners to the new buttons
         setupCategoryDetailListeners();
       }
 
@@ -3691,7 +3657,7 @@
       }
 
       // Speak message
-      function speakMessage() {
+      function speakMessage1() {
         if (
           !currentMessage ||
           currentMessage === languageData[currentLanguage].messagePlaceholder
@@ -3740,6 +3706,105 @@
               ? "Speech synthesis is not supported in your browser."
               : "ميزة الكلام غير مدعومة في متصفحك."
           );
+        }
+      }
+
+      // Speak message
+      function speakMessage() {
+        if (
+          !currentMessage ||
+          currentMessage === languageData[currentLanguage].messagePlaceholder
+        ) {
+          alert(
+            currentLanguage === "en"
+              ? "Please build a message first."
+              : "يرجى بناء رسالة أولاً."
+          );
+          return;
+        }
+
+        // Check if browser supports speech synthesis
+        if ("speechSynthesis" in window) {
+          const utterance = new SpeechSynthesisUtterance(currentMessage);
+
+          // Get available voices
+          const voices = speechSynthesis.getVoices();
+          let selectedVoiceObj = null;
+          //alert(selectedVoice);
+          // Set language and find appropriate voice
+          if (currentLanguage === "ar") {
+            utterance.lang = "ar-SA";
+            // Find Arabic voices based on gender selection
+            if (selectedVoice === "boy") {
+              selectedVoiceObj = voices.find(
+                (voice) =>
+                  voice.lang.includes("ar") &&
+                  (voice.name.toLowerCase().includes("male") ||
+                    voice.name.toLowerCase().includes("man") ||
+                    !voice.name.toLowerCase().includes("female"))
+              );
+            } else {
+              selectedVoiceObj = voices.find(
+                (voice) =>
+                  voice.lang.includes("ar") &&
+                  (voice.name.toLowerCase().includes("female") ||
+                    voice.name.toLowerCase().includes("woman"))
+              );
+            }
+          } else {
+            utterance.lang = "en-US";
+            // English voices based on gender selection
+            if (selectedVoice === "boy") {
+              selectedVoiceObj = voices.find(
+                (voice) =>
+                  voice.lang.includes("en") &&
+                  (voice.name.toLowerCase().includes("male") ||
+                    voice.name.toLowerCase().includes("man") ||
+                    !voice.name.toLowerCase().includes("female"))
+              );
+            } else {
+              selectedVoiceObj = voices.find(
+                (voice) =>
+                  voice.lang.includes("en") &&
+                  (voice.name.toLowerCase().includes("female") ||
+                    voice.name.toLowerCase().includes("woman"))
+              );
+            }
+          }
+          utterance.voice = selectedVoiceObj;
+          // // Set the voice if found
+          // if (selectedVoiceObj) {
+          //   utterance.voice = selectedVoiceObj;
+          // } else {
+          //   // Fallback to pitch adjustment if no gender-specific voice found
+          //   if (selectedVoice === "boy") {
+          //     utterance.rate = 0.9;
+          //     utterance.pitch = 1.1;
+          //   } else {
+          //     utterance.rate = 1.0;
+          //     utterance.pitch = 1.3;
+          //   }
+          // }
+
+          // Stop any current speech
+          speechSynthesis.cancel();
+
+          // Speak the message
+          speechSynthesis.speak(utterance);
+        } else {
+          alert(
+            currentLanguage === "en"
+              ? "Speech synthesis is not supported in your browser."
+              : "ميزة الكلام غير مدعومة في متصفحك."
+          );
+        }
+      }
+      // Load voices when they become available
+      function loadVoices() {
+        const voices = speechSynthesis.getVoices();
+        if (voices.length === 0) {
+          // Voices not loaded yet, wait for them
+          speechSynthesis.addEventListener("voiceschanged", loadVoices);
         }
       }
 
